@@ -2,7 +2,7 @@ function observeScrollAnimations() {
     let observer = new IntersectionObserver((enteries) => {
         enteries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'slideInRight 1.2s cubic-bezier(0.85, 0.37, 0.25, 0.95) both'
+                entry.target.style.animation = `${entry.target.dataset.anim || 'slideInRight'} 1.2s ${entry.target.dataset.delay || '0s'} ${entry.target.dataset.ease || 'cubic-bezier(0.85, 0.37, 0.25, 0.95)'} both`
                 observer.unobserve(entry.target);
             }
         })
