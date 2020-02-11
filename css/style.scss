@@ -621,6 +621,12 @@ section {
               color: #db5858;
             }
           }
+          .col_2 {
+            &:before {
+              bottom: 450px;
+              height: calc(100% - 450px);
+            }
+          }
         }
       }
     }
@@ -642,8 +648,8 @@ section {
           }
           .col_2 {
             &:before {
-              bottom: 400px;
-              height: calc(100% - 400px);
+              bottom: 450px;
+              height: calc(100% - 450px);
             }
           }
         }

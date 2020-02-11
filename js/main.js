@@ -34,6 +34,7 @@ window.onload = function () {
             })
             this.classList.add('active')
             document.getElementById(`${this.dataset.target}`).style.display = 'block';
+            updateLax()
         })
     })
 

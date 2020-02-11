@@ -668,6 +668,11 @@ section .row_2_col .col {
   color: #db5858;
 }
 
+#tabs .tab_content#tab3 .recommended_spots .spot_row .col_2:before {
+  bottom: 450px;
+  height: calc(100% - 450px);
+}
+
 #tabs .tab_content#tab4 h6,
 #tabs .tab_content#tab4 h2 {
   color: #4186ae;
@@ -682,8 +687,8 @@ section .row_2_col .col {
 }
 
 #tabs .tab_content#tab4 .recommended_spots .spot_row .col_2:before {
-  bottom: 400px;
-  height: calc(100% - 400px);
+  bottom: 450px;
+  height: calc(100% - 450px);
 }
 
 .shadow_container {
