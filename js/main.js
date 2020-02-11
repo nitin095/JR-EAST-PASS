@@ -23,4 +23,18 @@ window.onload = function () {
 
     window.requestAnimationFrame(updateLax)
     observeScrollAnimations()
+
+    document.querySelectorAll('#tabs .tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            document.querySelectorAll('#tabs .tab_content').forEach(function (tabContent) {
+                tabContent.style.display = 'none';
+            })
+            document.querySelectorAll('#tabs .tab').forEach(function (t) {
+                t.classList.remove('active')
+            })
+            this.classList.add('active')
+            document.getElementById(`${this.dataset.target}`).style.display = 'block';
+        })
+    })
+
 }

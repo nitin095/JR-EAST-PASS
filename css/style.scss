@@ -340,6 +340,7 @@ section {
       margin: 0 15px;
       padding: 30px;
       cursor: pointer;
+      transition: all 0.3s ease;
 
       b {
         display: block;
@@ -387,8 +388,15 @@ section {
     }
   }
 
+  #tab2,
+  #tab3,
+  #tab4 {
+    display: none;
+  }
+
   .tab_content {
     padding: 30px 75px 0 75px;
+    animation: slideUp 1s cubic-bezier(0.77, 0, 0.175, 1) both;
 
     h6,
     h2 {
@@ -578,6 +586,69 @@ section {
         }
       }
     }
+
+    &#tab1 {
+      h6,
+      h2 {
+        color: #04a2a8;
+      }
+      .recommended_spots {
+        .center_heading {
+          color: #04a2a8;
+        }
+        .spot_row {
+          .spot_card {
+            .label {
+              color: #04a2a8;
+            }
+          }
+        }
+      }
+    }
+
+    &#tab3 {
+      h6,
+      h2 {
+        color: #db5858;
+      }
+      .recommended_spots {
+        .center_heading {
+          color: #db5858;
+        }
+        .spot_row {
+          .spot_card {
+            .label {
+              color: #db5858;
+            }
+          }
+        }
+      }
+    }
+
+    &#tab4 {
+      h6,
+      h2 {
+        color: #4186ae;
+      }
+      .recommended_spots {
+        .center_heading {
+          color: #4186ae;
+        }
+        .spot_row {
+          .spot_card {
+            .label {
+              color: #4186ae;
+            }
+          }
+          .col_2 {
+            &:before {
+              bottom: 400px;
+              height: calc(100% - 400px);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -673,8 +744,8 @@ section {
     display: inline-flex;
     align-items: center;
     img {
-        margin-left: 10px;
-        height: 50px;
+      margin-left: 10px;
+      height: 50px;
     }
   }
 
@@ -758,6 +829,15 @@ footer {
         background-color: #fff;
       }
     }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(60px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 

@@ -370,6 +370,8 @@ section .row_2_col .col {
   margin: 0 15px;
   padding: 30px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #tabs .tabs_row .tab b {
@@ -416,8 +418,16 @@ section .row_2_col .col {
   background: #fff;
 }
 
+#tabs #tab2,
+#tabs #tab3,
+#tabs #tab4 {
+  display: none;
+}
+
 #tabs .tab_content {
   padding: 30px 75px 0 75px;
+  -webkit-animation: slideUp 1s cubic-bezier(0.77, 0, 0.175, 1) both;
+          animation: slideUp 1s cubic-bezier(0.77, 0, 0.175, 1) both;
 }
 
 #tabs .tab_content h6,
@@ -632,6 +642,50 @@ section .row_2_col .col {
           transform: translate(50%, -50%);
 }
 
+#tabs .tab_content#tab1 h6,
+#tabs .tab_content#tab1 h2 {
+  color: #04a2a8;
+}
+
+#tabs .tab_content#tab1 .recommended_spots .center_heading {
+  color: #04a2a8;
+}
+
+#tabs .tab_content#tab1 .recommended_spots .spot_row .spot_card .label {
+  color: #04a2a8;
+}
+
+#tabs .tab_content#tab3 h6,
+#tabs .tab_content#tab3 h2 {
+  color: #db5858;
+}
+
+#tabs .tab_content#tab3 .recommended_spots .center_heading {
+  color: #db5858;
+}
+
+#tabs .tab_content#tab3 .recommended_spots .spot_row .spot_card .label {
+  color: #db5858;
+}
+
+#tabs .tab_content#tab4 h6,
+#tabs .tab_content#tab4 h2 {
+  color: #4186ae;
+}
+
+#tabs .tab_content#tab4 .recommended_spots .center_heading {
+  color: #4186ae;
+}
+
+#tabs .tab_content#tab4 .recommended_spots .spot_row .spot_card .label {
+  color: #4186ae;
+}
+
+#tabs .tab_content#tab4 .recommended_spots .spot_row .col_2:before {
+  bottom: 400px;
+  height: calc(100% - 400px);
+}
+
 .shadow_container {
   padding: 30px 50px;
   -webkit-box-shadow: 0px 3px 20px #00000029;
@@ -842,6 +896,28 @@ footer .contact_us a::after {
   background-position: center;
   background-size: 40%;
   background-color: #fff;
+}
+
+@-webkit-keyframes slideUp {
+  from {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @-webkit-keyframes slideInUp {
