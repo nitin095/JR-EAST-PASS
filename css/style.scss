@@ -16,8 +16,8 @@ body {
 }
 
 .scroll_anim {
-  transform-origin: left;
-  transform: translateX(-100%);
+  // transform-origin: left;
+  // transform: translateX(-100%);
 
   &.scaleIn {
     perspective: 1000px;

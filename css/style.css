@@ -14,13 +14,6 @@ body {
   color: #008d00;
 }
 
-.scroll_anim {
-  -webkit-transform-origin: left;
-          transform-origin: left;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
 .scroll_anim.scaleIn {
   -webkit-perspective: 1000px;
           perspective: 1000px;
