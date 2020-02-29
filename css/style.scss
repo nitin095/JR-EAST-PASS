@@ -18,6 +18,7 @@ body {
 .scroll_anim {
   transform-origin: left;
   transform: translateX(-100%);
+
   &.scaleIn {
     perspective: 1000px;
     transform-origin: center;
@@ -29,34 +30,46 @@ body {
   overflow: hidden;
 }
 
+p {
+  font-weight: 500;
+}
+
 #banner {
-  height: calc(85vh);
+  height: 100vh;
   position: relative;
   padding: 0;
   transition: all 1s ease;
   background-color: #fef8ea;
+
   #bannerBox {
+    width: 100%;
     height: 100%;
+    overflow: hidden;
     position: relative;
     transition: all 1s ease;
+
     .banner {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100vw;
+      width: 100%;
       height: 100%;
+
       &.hidden {
         display: none !important;
       }
+
       a {
         position: relative;
       }
+
       img.static {
         height: 100%;
         width: 100%;
         object-fit: contain;
         object-position: top;
       }
+
       button {
         position: absolute;
         bottom: 40px;
@@ -65,28 +78,34 @@ body {
     }
   }
 }
+
 #nextBtn,
 #prevBtn {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
+
   button {
     background: rgba(19, 19, 19, 0.2);
     border: none;
     border-radius: 50%;
+
     &:focus {
       outline: none;
     }
+
     svg {
       height: 3rem;
       fill: rgb(216, 216, 216);
       transition: 0.3s;
       cursor: pointer;
+
       &:hover {
         fill: rgb(94, 94, 94);
         transition: 0.3s;
         transform: scale(0.9);
       }
+
       &:active {
         transform: scale(1.2);
         background-color: rgba(0, 0, 0, 0.103);
@@ -95,30 +114,36 @@ body {
     }
   }
 }
+
 #nextBtn {
   right: 3%;
 }
+
 #prevBtn {
   left: 3%;
 }
+
 #dots {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
   #banner {
-    height: 22vh;
+    height: 25vh;
   }
+
   #nextBtn,
   #prevBtn {
     display: none;
   }
+
   #dots {
     bottom: 5px;
     left: 0;
     width: 100%;
     z-index: 2;
     height: 10px;
+
     .dot {
       height: 10px;
       width: 10px;
@@ -126,11 +151,13 @@ body {
       border-radius: 50%;
       display: inline-block;
       margin: 0 5px;
+
       &.active {
         background-color: rgb(94, 94, 94);
       }
     }
   }
+
   .banner {
     img.static {
       height: auto !important;
@@ -140,11 +167,13 @@ body {
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   #banner {
+    height: 35vh;
     #bannerBox {
       .banner {
         img.static {
           object-fit: fill;
         }
+
         button {
           bottom: 10px;
           right: 120px;
@@ -154,12 +183,25 @@ body {
       }
     }
   }
+
   #nextBtn,
   #prevBtn {
     display: block;
   }
+
   #dots {
     bottom: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1199px){
+  #banner {
+    height: 38vh;
+  }
+}
+
+@media screen and (min-width:1500px) {
+  #banner {
+    height: 65vh;
   }
 }
 
@@ -203,37 +245,47 @@ section {
 }
 
 #areas {
+  padding-top: 1px;
+  margin-top: -30px;
   background-color: #fef8ea;
   text-align: center;
+
   h1 {
     font-weight: 600;
   }
+
   p {
     font-weight: 500;
   }
+
   .row_2_col {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     .area_card {
       width: 48%;
       background: #fff;
       padding: 20px;
       margin: 20px 0;
+
       h1 {
         margin-top: 0;
         margin-bottom: 5px;
         color: #04a2a8;
         font-weight: 600;
       }
+
       p {
         margin-top: 0;
         color: #000;
         font-weight: 500;
       }
+
       .images {
         display: flex;
         justify-content: space-between;
+
         img {
           width: 48%;
           height: auto;
@@ -245,6 +297,17 @@ section {
 }
 
 #pass {
+  padding-top: 0;
+
+  &>h1 {
+    line-height: 1.8;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(51, 116, 172);
+  }
+
   .col_2 {
     text-align: center;
 
@@ -253,7 +316,7 @@ section {
       transform: rotate(-10deg);
 
       img {
-        height: 400px;
+        height: 300px;
       }
     }
   }
@@ -270,7 +333,7 @@ section {
     text-align: center;
 
     img {
-      height: 400px;
+      height: 300px;
     }
   }
 
@@ -392,7 +455,6 @@ section {
 
   .tabs_row {
     display: flex;
-    padding: 0 30px;
 
     .tab {
       flex: 1;
@@ -457,7 +519,7 @@ section {
   }
 
   .tab_content {
-    padding: 30px 75px 0 75px;
+    padding: 30px 30px 0 30px;
     animation: slideUp 1s cubic-bezier(0.77, 0, 0.175, 1) both;
 
     h6,
@@ -469,6 +531,7 @@ section {
     h2 {
       font-weight: 500;
     }
+
 
     .row_2_col {
       display: flex;
@@ -495,32 +558,111 @@ section {
           }
         }
 
-        img {
-          display: block;
-          margin: auto;
-          height: 250px;
+        .route_areas {
+          display: flex;
+          flex-wrap: wrap;
+
+          .top {
+            display: flex;
+            margin: 30px 0;
+
+            img {
+              height: 150px;
+            }
+
+            .route_line {
+              width: 2px;
+              height: 100%;
+              background: #000;
+              margin: 0 30px 0 50px;
+              position: relative;
+
+              .start,
+              .end {
+                position: absolute;
+                bottom: 105%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 200px;
+                text-align: center;
+                font-weight: 600;
+                font-size: small;
+              }
+
+              .end {
+                bottom: -15%;
+              }
+            }
+
+            p {
+              font-size: small;
+            }
+          }
+
+          .bottom {
+            display: flex;
+            margin: 10px 0;
+            justify-content: space-between;
+
+            .col {
+              &:nth-child(2) {
+                margin: 0 10px;
+              }
+
+              text-align: center;
+
+              img {
+                height: 110px;
+              }
+
+              p {
+                margin: 0;
+                font-size: small;
+              }
+            }
+
+
+          }
         }
+
       }
 
       .col_2 {
         flex: 2.5;
         text-align: center;
+        position: relative;
 
         img {
           height: 600px;
+        }
+
+        .img-magnifier-glass {
+          position: absolute;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+          border-radius: 5%;
+          cursor: none;
+          width: 250px;
+          height: 250px;
         }
       }
     }
 
     .recommended_spots {
-      padding: 100px 0 0;
+      padding: 100px 50px 0;
       margin: 0 -60px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
+      &>h1 {
+        width: 100%;
+        text-align: center;
+        font-weight: 600;
+        color: rgb(51, 116, 172);
+      }
+
       .center_heading {
-        color: #fb8d59;
+        color: #fb8d59 !important;
         font-weight: 800;
         display: inline-block;
         padding: 20px;
@@ -565,7 +707,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fb8d59;
+            color: #fb8d59 !important;
             border-radius: 50%;
             border: 1px solid #707070;
             position: absolute;
@@ -650,14 +792,17 @@ section {
     }
 
     &#tab1 {
+
       h6,
       h2 {
         color: #04a2a8;
       }
+
       .recommended_spots {
         .center_heading {
           color: #04a2a8;
         }
+
         .spot_row {
           .spot_card {
             .label {
@@ -669,20 +814,24 @@ section {
     }
 
     &#tab3 {
+
       h6,
       h2 {
         color: #db5858;
       }
+
       .recommended_spots {
         .center_heading {
           color: #db5858;
         }
+
         .spot_row {
           .spot_card {
             .label {
               color: #db5858;
             }
           }
+
           .col_2 {
             &:before {
               bottom: 450px;
@@ -694,20 +843,24 @@ section {
     }
 
     &#tab4 {
+
       h6,
       h2 {
         color: #4186ae;
       }
+
       .recommended_spots {
         .center_heading {
           color: #4186ae;
         }
+
         .spot_row {
           .spot_card {
             .label {
               color: #4186ae;
             }
           }
+
           .col_2 {
             &:before {
               bottom: 450px;
@@ -737,6 +890,7 @@ section {
     font-weight: 900;
     display: inline-flex;
     align-items: center;
+
     img {
       margin-left: 5px;
       height: 50px;
@@ -811,6 +965,7 @@ section {
   h1.s_underline {
     display: inline-flex;
     align-items: center;
+
     img {
       margin-left: 10px;
       height: 50px;
@@ -822,13 +977,13 @@ section {
     justify-content: center;
     align-items: center;
 
-    & > div,
+    &>div,
     a {
       background: $base-color;
       color: #fff;
       padding: 15px 30px;
       margin: 0 30px;
-      max-width: 20vw;
+      max-width: 30vw;
       text-align: center;
       border-radius: 10px;
 
@@ -836,6 +991,45 @@ section {
         display: block;
         margin-top: 5px;
       }
+    }
+  }
+}
+
+#floatingBuyBtn {
+  position: fixed;
+  bottom: 5%;
+  right: 0;
+  display: none;
+
+  a {
+    background: $base-color;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    animation: slideInLeft 1s ease both;
+
+    img {
+      margin-left: 15px;
+      height: 30px;
+      width: 30px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 8%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &:hover {
+    a {
+      transition: all 0.5s ease;
+      padding-right: 30px;
+      background: #007000;
     }
   }
 }
@@ -858,7 +1052,7 @@ footer {
       text-decoration: none;
     }
 
-    & > div {
+    &>div {
       width: 100%;
       text-align: center;
       padding-top: 15px;
@@ -904,6 +1098,7 @@ footer {
   from {
     transform: translateY(60px);
   }
+
   to {
     transform: translateY(0);
   }
@@ -922,6 +1117,16 @@ footer {
 @keyframes slideInRight {
   from {
     transform: translateX(-40%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
   }
 
   to {
@@ -957,116 +1162,73 @@ footer {
   0% {
     transform: translateY(-5px);
   }
+
   50% {
     transform: translateY(5px);
   }
+
   100% {
     transform: translateY(-5px);
   }
 }
 
 @media screen and (max-width: 575px) {
+
   section,
   header {
     overflow-x: hidden;
   }
-  header {
-    overflow: hidden;
-    .slider {
-      .slider__slide {
-        img {
-          object-position: 20%;
-        }
-      }
-    }
 
-    .l1 {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      padding-bottom: 20vh;
-      .top_row {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 15px;
-        align-items: center;
-
-        .left {
-          img {
-            height: 22px;
-          }
-        }
-
-        .right {
-          img {
-            height: 40px;
-          }
-        }
-      }
-      h5 {
-        font-size: 1.2rem;
-        max-width: 90vw;
-        transform: translateY(0);
-      }
-      h1 {
-        font-size: 3rem;
-        transform: translateY(0);
-      }
-
-      .hightlight {
-        font-size: 0.9rem;
-      }
-
-      .scroll_down_container {
-        z-index: 99;
-      }
-    }
-
-    .train_img {
-      width: 90vw;
-    }
-  }
   section {
     padding: 20px 15px;
+
     .row_2_col {
       flex-wrap: wrap;
+
       .col {
         flex: auto;
       }
     }
   }
+
   #areas {
     .row_2_col {
       justify-content: center;
+
       .area_card {
         width: 95%;
       }
     }
   }
+
   #rates {
     table {
       margin: 30px 0;
     }
   }
+
   #cards {
     .card_row {
       flex-wrap: wrap;
+
       .card {
         flex: auto;
         margin: 15px;
+
         &:first-child {
           margin-left: 15px;
         }
+
         &:last-child {
           margin-right: 15px;
         }
       }
     }
   }
+
   #tabs {
     padding: 0;
+
     .tabs_row {
       padding: 0;
       width: 100vw;
@@ -1075,6 +1237,7 @@ footer {
       overflow-x: scroll;
       position: sticky;
       top: 0;
+
       .tab {
         flex: auto;
         display: block;
@@ -1094,15 +1257,52 @@ footer {
         .col_1 {
           flex: auto;
 
-          img {
-            margin: 30px 0;
-            width: 100%;
-            height: auto;
+          .route_areas {
+  
+            .top {
+              flex-wrap: wrap;
+              margin-bottom: 0;
+              img{
+                object-position: left;
+                object-fit: contain;
+                width: 100%;
+              }
+  
+              .route_line {
+                margin: 50px 50px 30px;
+                height: 100px;
+              }
+  
+              p {
+                align-self: center;
+                width: 60%;
+              }
+            }
+  
+            .bottom {
+              justify-content: flex-start;
+              flex-wrap: wrap;
+  
+              .col {
+                margin-bottom: 15px;
+                &:nth-child(2) {
+                  margin: 0;
+                }
+  
+                img {
+                  height: 100px;
+                }
+              }
+  
+  
+            }
           }
+  
         }
 
         .col_2 {
           flex: auto;
+
           img {
             width: 100%;
             height: auto;
@@ -1130,14 +1330,18 @@ footer {
 
           .spot_card {
             padding: 0;
-            margin: 0 0 80px 0;
+            // margin: 0 0 80px 0;
+            margin: 0;
             box-shadow: 0px 3px 20px #00000029;
+
             h4 {
               padding-left: 15px;
             }
+
             p {
               padding: 0 15px 15px;
             }
+
             .label {
               height: 60px;
               width: 60px;
@@ -1153,12 +1357,15 @@ footer {
               line-height: 1;
               font-size: 1.5rem;
               z-index: 9 !important;
+              display: none;
             }
           }
 
           .col_1 {
-            padding-top: 150px;
+            padding-top: 80px;
+            // padding-top: 150px;
             padding-right: 0;
+
             .spot_card {
               .img {
                 &:after {
@@ -1167,7 +1374,7 @@ footer {
                   left: 50%;
                   width: 1px;
                   height: 100px;
-                  border-right: 1px dashed #000;
+                  // border-right: 1px dashed #000;
                 }
 
                 .label {
@@ -1182,9 +1389,11 @@ footer {
 
           .col_2 {
             padding-left: 0;
+
             &:before {
               display: none;
             }
+
             .spot_card {
               .img {
                 &:after {
@@ -1195,7 +1404,7 @@ footer {
                   transform: translateX(-50%);
                   width: 1px;
                   height: 100px;
-                  border-right: 1px dashed #707070;
+                  // border-right: 1px dashed #707070;
                 }
 
                 .label {
@@ -1212,6 +1421,7 @@ footer {
       }
     }
   }
+
   #steps {
     .steps_row {
       flex-wrap: wrap;
@@ -1225,14 +1435,16 @@ footer {
       }
     }
   }
+
   .shadow_container {
     padding: 30px;
   }
+
   #buy {
     .btns_row {
       flex-wrap: wrap;
 
-      & > div,
+      &>div,
       a {
         display: block;
         margin: 10px;
@@ -1242,10 +1454,29 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  section {
+    padding: 50px 100px;
+  }
+
+  #rates {
+    .row_2_col {
+      .col:first-child {
+        flex: 2;
+      }
+    }
+
+    table td {
+      padding: 20px 30px;
+    }
+  }
+}
+
 @keyframes bannerSlideOutLeft {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -1255,6 +1486,7 @@ footer {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(100%);
   }
@@ -1264,6 +1496,7 @@ footer {
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
@@ -1273,6 +1506,7 @@ footer {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(0);
   }

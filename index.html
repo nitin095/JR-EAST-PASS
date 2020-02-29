@@ -88,7 +88,7 @@
             cultures, etc. Let's explore East japan!
         </p>
         <div class="row_2_col">
-            <div class="area_card">
+            <div class="area_card scroll_anim" data-anim="slideInUp">
                 <h1>Tokyo</h1>
                 <p>
                     Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
@@ -99,33 +99,32 @@
                     <img src="./assets/fukushima.png" alt="">
                 </div>
             </div>
-            <div class="area_card">
-                <h1>Tokyo</h1>
+            <div class="area_card scroll_anim" data-anim="slideInUp">
+                <h1>Kanto Area</h1>
                 <p>
-                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
-                    never get bored.
+                    Kanto Area is Tokyo and surrounding area, it's close to Tokyo and day trips are also recommended.
+                    You can enjoy sightseeing hot springs and featured activites.
                 </p>
                 <div class="images">
                     <img src="./assets/fukushima.png" alt="">
                     <img src="./assets/fukushima.png" alt="">
                 </div>
             </div>
-            <div class="area_card">
-                <h1>Tokyo</h1>
+            <div class="area_card scroll_anim" data-anim="slideInUp">
+                <h1>Tohoku Area</h1>
                 <p>
-                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
-                    never get bored.
+                    Tohoku is located north of Honshu, main island of Japan. This area is blessed with richness of
+                    nature & original culture.
                 </p>
                 <div class="images">
                     <img src="./assets/fukushima.png" alt="">
                     <img src="./assets/fukushima.png" alt="">
                 </div>
             </div>
-            <div class="area_card">
-                <h1>Tokyo</h1>
+            <div class="area_card scroll_anim" data-anim="slideInUp">
+                <h1>Nagano, Nilgata Area</h1>
                 <p>
-                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
-                    never get bored.
+                    Nagano is surrounded beautiful mountains and called the "Roof of Japan", and blessed with crops.
                 </p>
                 <div class="images">
                     <img src="./assets/fukushima.png" alt="">
@@ -175,13 +174,43 @@
                         <li>Akita</li>
                         <li>Fukushima</li>
                     </ul>
-                    <img src="./assets/miyagi.png" alt="">
+                    <div class="route_areas">
+                        <div class="top">
+                            <img src="./assets/miyagi.png" alt="">
+                            <div class="route_line">
+                                <div class="start">Narita Airport</div>
+                                <div class="end">Tokyo Area</div>
+                            </div>
+                            <p>
+                                Narita Express is convenient for access in Tokyo area from Narita Airpot. Tokyo station
+                                is about 1 hour from Narita Airport.
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="col">
+                                <img src="./assets/miyagi.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Imperial Palace</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/miyagi.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Omtesando Hills</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/miyagi.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Edo-Tokyo Museum</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
+                <div class="col_2" onmouseleave="removeLense()">
+                    <img id="route1Map" onmouseover="magnify('route1Map');" src="./assets/Map_route 1.jpg" alt="">
                 </div>
             </div>
             <div class="recommended_spots">
+                <h1>Let's find beautiful Japan outside of Tokyo!</h1>
                 <div class="center_heading">Recommended Spots</div>
                 <div class="spot_row">
                     <div class="col_1">
@@ -273,10 +302,39 @@
                         <li>Aomori</li>
                         <li>Niigata</li>
                     </ul>
-                    <img src="./assets/joyfulTrain.png" alt="">
+                    <div class="route_areas">
+                        <div class="top">
+                            <img src="./assets/joyfulTrain.png" alt="">
+                            <div class="route_line">
+                                <div class="start">Narita Airport</div>
+                                <div class="end">Tokyo Area</div>
+                            </div>
+                            <p>
+                                Narita Express is convenient for access in Tokyo area from Narita Airpot. Tokyo station
+                                is about 1 hour from Narita Airport.
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="col">
+                                <img src="./assets/joyfulTrain.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Imperial Palace</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/joyfulTrain.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Omtesando Hills</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/joyfulTrain.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Edo-Tokyo Museum</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
+                <div class="col_2" onmouseleave="removeLense()">
+                    <img id="route2Map" onmouseover="magnify('route2Map');" src="./assets/Map_Route 2.jpg" alt="">
                 </div>
             </div>
             <div class="recommended_spots">
@@ -362,10 +420,39 @@
                         <li>Akita</li>
                         <li>Yamagata</li>
                     </ul>
-                    <img src="./assets/fukushima.png" alt="">
+                    <div class="route_areas">
+                        <div class="top">
+                            <img src="./assets/fukushima.png" alt="">
+                            <div class="route_line">
+                                <div class="start">Narita Airport</div>
+                                <div class="end">Tokyo Area</div>
+                            </div>
+                            <p>
+                                Narita Express is convenient for access in Tokyo area from Narita Airpot. Tokyo station
+                                is about 1 hour from Narita Airport.
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="col">
+                                <img src="./assets/fukushima.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Imperial Palace</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/fukushima.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Omtesando Hills</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/fukushima.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Edo-Tokyo Museum</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
+                <div class="col_2" onmouseleave="removeLense()">
+                    <img id="route3Map" onmouseover="magnify('route3Map');" src="./assets/Map_Route 3.jpg" alt="">
                 </div>
             </div>
             <div class="recommended_spots">
@@ -477,10 +564,39 @@
                         <li>Niigata</li>
                         <li>Nagano</li>
                     </ul>
-                    <img src="./assets/niigata.png" alt="">
+                    <div class="route_areas">
+                        <div class="top">
+                            <img src="./assets/niigata.png" alt="">
+                            <div class="route_line">
+                                <div class="start">Narita Airport</div>
+                                <div class="end">Tokyo Area</div>
+                            </div>
+                            <p>
+                                Narita Express is convenient for access in Tokyo area from Narita Airpot. Tokyo station
+                                is about 1 hour from Narita Airport.
+                            </p>
+                        </div>
+                        <div class="bottom">
+                            <div class="col">
+                                <img src="./assets/niigata.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Imperial Palace</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/niigata.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Omtesando Hills</p>
+                            </div>
+                            <div class="col">
+                                <img src="./assets/niigata.png" alt="">
+                                <p>&copy; TCVB</p>
+                                <p>Edo-Tokyo Museum</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
+                <div class="col_2" onmouseleave="removeLense()">
+                    <img id="route4Map" onmouseover="magnify('route4Map');" src="./assets/Map_Route 4.jpg" alt="">
                 </div>
             </div>
             <div class="recommended_spots">
@@ -579,6 +695,9 @@
     </section>
 
     <section id="pass">
+        <h1>
+            If you travel Tokyo and Tohoku area, JR EAST PASS is very convenient!<br>Let's check JR EAST PASS.
+        </h1>
         <div class="row_2_col">
             <div class="col no_overflow">
                 <h1 class="s_underline scroll_anim">What's <span>JR EAST</span> PASS</h1>
@@ -602,7 +721,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="rates">
         <div class="row_2_col">
@@ -667,10 +785,10 @@
                             <h5>Purchasing outside of Japan</h5>
                         </td>
                         <td>
-                            <h5>19,350 <span>yen</span></h5>
+                            <h5>18,350 <span>yen</span></h5>
                         </td>
                         <td>
-                            <h5>9,670 <span>yen</span></h5>
+                            <h5>9,160 <span>yen</span></h5>
                         </td>
                     </tr>
                     <tr>
@@ -678,10 +796,10 @@
                             <h5>Purchasing in Japan</h5>
                         </td>
                         <td>
-                            <h5>20,360 <span>yen</span></h5>
+                            <h5>17,310 <span>yen</span></h5>
                         </td>
                         <td>
-                            <h5>10,180 <span>yen</span></h5>
+                            <h5>8,650 <span>yen</span></h5>
                         </td>
                     </tr>
                 </table>
@@ -691,7 +809,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="cards">
         <h1>Benefit of <span>JR EAST</span> PASS</h1>
@@ -722,7 +839,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="steps">
         <div class="shadow_container">
@@ -825,6 +941,13 @@
             </div>
         </div>
     </section>
+
+    <div id="floatingBuyBtn">
+        <a href="">
+            <span>Buy Now</span>
+            <img src="./assets/arrowRight.png" alt="buy">
+        </a>
+    </div>
 
     <footer>
         <div class="top">
