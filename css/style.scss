@@ -29,117 +29,137 @@ body {
   overflow: hidden;
 }
 
-header {
+#banner {
+  height: calc(85vh);
   position: relative;
-  height: 100vh;
-
-  .slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    .slider__slide {
-      img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .l1 {
-    background: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  transition: all 1s ease;
+  background-color: #fef8ea;
+  #bannerBox {
     height: 100%;
-    width: 100%;
-    padding: 0 30px;
-    font-family: "Montserrat", sans-serif;
     position: relative;
-    .top_row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15%;
-      padding-top: 30px;
-
-      .left {
-        img {
-          height: 25px;
-        }
-      }
-
-      .right {
-        img {
-          height: 50px;
-        }
-      }
-    }
-
-    h5 {
-      color: #fff;
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 300;
-      max-width: 50vw;
-      transform: translateY(100%);
-      animation: slideInUp 1.5s cubic-bezier(0.85, 0.37, 0.25, 0.95) both;
-
-      &:last-of-type {
-        animation-delay: 0.4s;
-      }
-    }
-
-    h1 {
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 6rem;
-      margin: 0;
-      transform: translateY(100%);
-      animation: slideInUp 1.5s 0.25s cubic-bezier(0.85, 0.37, 0.25, 0.95) both;
-
-      span.green {
-        color: $base-color;
-      }
-    }
-
-    .hightlight {
-      background: $base-color;
-      color: #fff;
-      padding: 5px 10px;
-      font-weight: 500;
-      font-size: 1.5rem;
-      display: inline-block;
-      margin-top: 30px;
-      transform: translateY(100%);
-      animation: slideInUp 0.8s 1.5s cubic-bezier(0.85, 0.37, 0.25, 0.95) both;
-    }
-
-    .scroll_down_container {
+    transition: all 1s ease;
+    .banner {
       position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateY(-50%);
-      .scroll_down {
-        height: 50px;
-        width: 50px;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      &.hidden {
+        display: none !important;
+      }
+      a {
+        position: relative;
+      }
+      img.static {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: top;
+      }
+      button {
+        position: absolute;
+        bottom: 40px;
+        right: 250px;
+      }
+    }
+  }
+}
+#nextBtn,
+#prevBtn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  button {
+    background: rgba(19, 19, 19, 0.2);
+    border: none;
+    border-radius: 50%;
+    &:focus {
+      outline: none;
+    }
+    svg {
+      height: 3rem;
+      fill: rgb(216, 216, 216);
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        fill: rgb(94, 94, 94);
+        transition: 0.3s;
+        transform: scale(0.9);
+      }
+      &:active {
+        transform: scale(1.2);
+        background-color: rgba(0, 0, 0, 0.103);
         border-radius: 50%;
-        background: $base-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: bounce 2s ease infinite;
-        img {
-          mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+#nextBtn {
+  right: 3%;
+}
+#prevBtn {
+  left: 3%;
+}
+#dots {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #banner {
+    height: 22vh;
+  }
+  #nextBtn,
+  #prevBtn {
+    display: none;
+  }
+  #dots {
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 10px;
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: rgb(160, 159, 159);
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 5px;
+      &.active {
+        background-color: rgb(94, 94, 94);
+      }
+    }
+  }
+  .banner {
+    img.static {
+      height: auto !important;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #banner {
+    #bannerBox {
+      .banner {
+        img.static {
+          object-fit: fill;
+        }
+        button {
+          bottom: 10px;
+          right: 120px;
+          font-size: 1rem;
+          padding: 0.2rem 0.5rem;
         }
       }
     }
   }
-
-  .train_img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 45vw;
+  #nextBtn,
+  #prevBtn {
+    display: block;
+  }
+  #dots {
+    bottom: 20px;
   }
 }
 
@@ -178,6 +198,48 @@ section {
 
     .col {
       flex: 1;
+    }
+  }
+}
+
+#areas {
+  background-color: #fef8ea;
+  text-align: center;
+  h1 {
+    font-weight: 600;
+  }
+  p {
+    font-weight: 500;
+  }
+  .row_2_col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .area_card {
+      width: 48%;
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      h1 {
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: #04a2a8;
+        font-weight: 600;
+      }
+      p {
+        margin-top: 0;
+        color: #000;
+        font-weight: 500;
+      }
+      .images {
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 48%;
+          height: auto;
+          margin: 10px 0;
+        }
+      }
     }
   }
 }
@@ -975,6 +1037,14 @@ footer {
       }
     }
   }
+  #areas {
+    .row_2_col {
+      justify-content: center;
+      .area_card {
+        width: 95%;
+      }
+    }
+  }
   #rates {
     table {
       margin: 30px 0;
@@ -1169,5 +1239,41 @@ footer {
         max-width: 60vw;
       }
     }
+  }
+}
+
+@keyframes bannerSlideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bannerSlideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bannerSlideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bannerSlideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }

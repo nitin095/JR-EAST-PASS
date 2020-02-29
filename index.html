@@ -12,44 +12,571 @@
 <body>
 
     <header>
-        <div class="slider">
-            <div class="slider__slide">
-                <img src="./assets/slider01.png" alt="JR EAST PASS">
+        <div id="banner" class="container">
+            <div id="bannerBox">
+                <div class="banner">
+                    <picture>
+                        <!-- <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/1.webp" type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/1.jpg">
+                            <source srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/mobile/1.webp"
+                                type="image/webp"> -->
+                        <img class="static" src="./assets/banner1.jpg" alt="banner">
+                    </picture>
+                </div>
+                <div class="banner hidden">
+                    <picture>
+                        <!-- <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/2.webp" type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/2.png">
+                            <source srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/mobile/2.webp"
+                                type="image/webp"> -->
+                        <img class="static lazy_banner" data-src="./assets/banner2.jpg" alt="banner">
+                    </picture>
+                </div>
+                <div class="banner hidden">
+                    <picture>
+                        <!-- <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/3.webp" type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/3.png">
+                            <source srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/mobile/3.webp"
+                                type="image/webp"> -->
+                        <img class="static lazy_banner" data-src="./assets/banner3.jpg" alt="banner">
+                    </picture>
+                </div>
+                <div class="banner hidden">
+                    <picture>
+                        <!-- <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/4.webp" type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/4.png">
+                            <source srcset="<?php echo ASSETS_URL_FRONT; ?>images/banners/mobile/4.webp"
+                                type="image/webp"> -->
+                        <img class="static lazy_banner" data-src="./assets/banner4.jpg" alt="banner">
+                    </picture>
+                </div>
             </div>
         </div>
-        <div class="l1">
-            <div class="top_row">
-                <div class="left">
-                    <img src="./assets/header_logo.png" alt="JR East Group">
-                </div>
-                <div class="right">
-                    <img src="./assets/header_logo2.png" alt="JR East Group">
-                </div>
-            </div>
-            <div class="lax" data-lax-preset="eager-250">
-                <div class="no_overflow">
-                    <h5>Make your Japan travel convenient with</h5>
-                </div>
-                <div class="no_overflow">
-                    <h1><span class="green">JR East</span> Pass</h1>
-                </div>
-                <div class="no_overflow">
-                    <h5>Travel unlimited throughout east Japan for the best value.
-                    </h5>
-                </div>
-                <div class="no_overflow">
-                    <div class="hightlight">Buy online from India and get a discount!</div>
-                </div>
-            </div>
-            <div class="scroll_down_container lax" data-lax-preset="eager">
-                <div class="scroll_down">
-                    <img src="./assets/arrowDown.png" alt="">
-                </div>
-            </div>
+        <div id="nextBtn">
+            <button onclick="bannerNext()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                    <path d="M7.5 4.5L6.44 5.56 9.88 9l-3.44 3.44L7.5 13.5 12 9z" /></svg>
+            </button>
         </div>
-        <img class="train_img" src="./assets/train.png" alt="train">
+        <div id="prevBtn">
+            <button onclick="bannerPrevious()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                    <path d="M11.56 5.56L10.5 4.5 6 9l4.5 4.5 1.06-1.06L8.12 9z" /></svg>
+            </button>
+        </div>
+        <div id="dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
     </header>
 
+    <section id="areas">
+        <h1>East Japan</h1>
+        <p>Japan is a long bow shape island that expands north to south, so the weather varies from region to region and
+            you can see different scenery in the same season.
+            A variety of charms are packed in East Japan area. You can enjoy city walk, natural landscapes, food
+            cultures, etc. Let's explore East japan!
+        </p>
+        <div class="row_2_col">
+            <div class="area_card">
+                <h1>Tokyo</h1>
+                <p>
+                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
+                    never get bored.
+                </p>
+                <div class="images">
+                    <img src="./assets/fukushima.png" alt="">
+                    <img src="./assets/fukushima.png" alt="">
+                </div>
+            </div>
+            <div class="area_card">
+                <h1>Tokyo</h1>
+                <p>
+                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
+                    never get bored.
+                </p>
+                <div class="images">
+                    <img src="./assets/fukushima.png" alt="">
+                    <img src="./assets/fukushima.png" alt="">
+                </div>
+            </div>
+            <div class="area_card">
+                <h1>Tokyo</h1>
+                <p>
+                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
+                    never get bored.
+                </p>
+                <div class="images">
+                    <img src="./assets/fukushima.png" alt="">
+                    <img src="./assets/fukushima.png" alt="">
+                </div>
+            </div>
+            <div class="area_card">
+                <h1>Tokyo</h1>
+                <p>
+                    Tokyo, the capital of Japan, is also a fashion capital and has a lot of famous tourist spots. You
+                    never get bored.
+                </p>
+                <div class="images">
+                    <img src="./assets/fukushima.png" alt="">
+                    <img src="./assets/fukushima.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tabs">
+        <div class="tabs_row">
+            <div data-target="tab1" class="tab active">
+                <b>Route 1</b>
+                <span>Sakura in Tohoku</span>
+            </div>
+            <div data-target="tab2" class="tab">
+                <b>Route 2</b>
+                <span>Travel with Joyful Trains</span>
+            </div>
+            <div data-target="tab3" class="tab">
+                <b>Route 3</b>
+                <span>Enjoy culture and nature in Tohoku</span>
+            </div>
+            <div data-target="tab4" class="tab">
+                <b>Route 4</b>
+                <span>Snow Monkeys, Sushi & a deep history</span>
+            </div>
+        </div>
+        <div id="tab1" class="tab_content">
+            <div class="row_2_col">
+                <div class="col_1">
+                    <h6>JR EAST Pass</h6>
+                    <h2>Route 1 : Sakura in Tohoku</h2>
+                    <p>When Cherry blossoms fall at Tokyo, Spring has visited Northern Japan - Tohoku at last. This area
+                        has a lot of famous spot of cherry blossom which attracts you with harmony of original sceneries
+                        such as historical buildings and majestic mountains. The best time to enjoy cherry blossom at
+                        Tohoku is from the end of April to the beginning of May when the price of air tickets goes down.
+                        Why not visit Tohoku area in this season?
+                    </p>
+                    <ul>
+                        <li><b>Travel days</b></li>
+                        <li>5 selected days within 14 days after activation of JR EAST PASS </li>
+                        <li><b>Destination</b></li>
+                        <li>Miyagi</li>
+                        <li>Iwate</li>
+                        <li>Aomori</li>
+                        <li>Akita</li>
+                        <li>Fukushima</li>
+                    </ul>
+                    <img src="./assets/miyagi.png" alt="">
+                </div>
+                <div class="col_2">
+                    <img src="./assets/route2.png" alt="">
+                </div>
+            </div>
+            <div class="recommended_spots">
+                <div class="center_heading">Recommended Spots</div>
+                <div class="spot_row">
+                    <div class="col_1">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">2</div>
+                                <img src="./assets/kitakami-tenshochi-park.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Kitakami Tenshochi Park</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Kitakami Tenshochi is on the banks of Kitakami river and is counted in one of Japan’s
+                                Top 100 Cherry Blossom Viewing Sites and the top 3 cherry blossom locations in the
+                                Michinoku – Tohoku region. In addition to row of cherry trees along the river, it’s said
+                                there are over 10,000, 150 different kinds cherry trees in the park, and you can enjoy
+                                different types of cherries from middle of April to the beginning of May.
+                            </p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">4</div>
+                                <img src="./assets/kakunodate.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Kakunodate</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Kakunodate is known as a famous cherry blossom spot in Akita prefecture. Over 400
+                                weeping cherry blossoms are in their full glory on both side of the road lined with
+                                Samurai houses, which creates lyrical scenery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col_2">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">1</div>
+                                <img src="./assets/funaoka-joshi-koen.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Funaoka Joshi Koen</h4>
+                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s">Funaoka Joshi Koen is known
+                                as a famous cherry blossom spot in Tohoku, which has more than 1.300 cherry blossom
+                                trees and is chosen as one of Japan’s Top 100 Cherry Blossom Viewing Sites. You also
+                                enjoy Thousand Trees of Cherry Blossoms at the Bank of Shiroishi River nearby.
+                            </p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">3</div>
+                                <img src="./assets/hirosaki-castle-park.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Hirosaki Castle Park</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Hirosaki Park is known as Japan’s three major cherry blossom spots. Highlight is
+                                contrast between cherry trees in full bloom and Hirosaki castle. Also, you can see
+                                Japan‘s oldest Yoshino cherry in full bloom and enjoy cherry blossom blizzard and flower
+                                raft. Please enjoy the cherry blossom at Hirosaki Park, which is also called one of the
+                                most beautiful scerery.
+                                .</p>
+                        </div>
+                        <div class="spot_card">
+                            <div class="img">
+                                <div class="label">5</div>
+                                <img src="./assets/tsurugajo-castle-park.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Tsurugajo Castle Park</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Tsurugajo‘s castle tower is covered with red roof tiles and it’s the only castle in
+                                Japan. The harmony between the red color roof and over 1,000 cherry blossoms is
+                                splendid. It is chosen as one of Japan’s Top 100 Cherry Blossom Viewing Sites.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="tab_content">
+            <div class="row_2_col">
+                <div class="col_1">
+                    <h6>JR East Rail Pass</h6>
+                    <h2>Route 2 : Joyful Train</h2>
+                    <p>Riding the train is no longer just transportation to the destination but how you get there. The
+                        Joyful Train is tourism trains themed “Riding fun” and a new way to travel. This Joyful Train
+                        offers an exciting variety of services.</p>
+                    <ul>
+                        <li><b>Travel days</b></li>
+                        <li>5 selected days within 14 days after activation of JR EAST PASS</li>
+                        <li><b>Destination</b></li>
+                        <li>Fukushima</li>
+                        <li>Yamagata</li>
+                        <li>Iwate</li>
+                        <li>Akita</li>
+                        <li>Aomori</li>
+                        <li>Niigata</li>
+                    </ul>
+                    <img src="./assets/joyfulTrain.png" alt="">
+                </div>
+                <div class="col_2">
+                    <img src="./assets/route2.png" alt="">
+                </div>
+            </div>
+            <div class="recommended_spots">
+                <div class="center_heading">Recommended Spots</div>
+                <div class="spot_row">
+                    <div class="col_1">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">2</div>
+                                <img src="./assets/Tohoku Emotion.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Tohoku Emotion</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">Car interior like a restaurant that makes it
+                                possible to leisurely enjoy meals while
+                                viewing the scenery. Feast your eyes on the various tableware and fixtures, the fruits
+                                of of Took traditional skills and beauty created solely for <b>Tohoku Emotion</b>.</p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">4</div>
+                                <img src="./assets/Kairi.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Kairi</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">The <b>KAIRI</b> debuted just on October 5,
+                                2019, is a new hybrid diesel configured with
+                                four
+                                cars providing service between Niigata and Sakata. You can enjoy the cuisineof Niigata
+                                and SHonaim and the beautiful vistas.</p>
+                        </div>
+                    </div>
+                    <div class="col_2">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">1</div>
+                                <img src="./assets/Toreiyu Tsubasa.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">TOREIYU TSUBASA</h4>
+                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s"><b>TOREIYU TSUBASA</b> is the
+                                world’s first Shinkansen with a foot bath. Enjoy Yamagata’s
+                                food,
+                                alcohol and foot bath from inside the train.</p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">3</div>
+                                <img src="./assets/Resort Shirakami.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Resort Shirakami</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">Get your fill of beautiful scenery, including
+                                waves washing against fantastically shaped
+                                rocks, the Shirakami mountains, etc. Also enjoy a Tsugaru Shamisen performance while on
+                                trains.</p>
+                        </div>
+                        <div class="spot_card">
+                            <div class="img">
+                                <div class="label">5</div>
+                                <img src="./assets/Genbi Shinkansen.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Genbi Shinkansen</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">The world’s fastest art experience! Modern art
+                                created by prominent artists especially
+                                for the Genbi Shinkansen is on exhibit in each car. Enjoy modern art while travelling on
+                                the Shinkanse.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab3" class="tab_content">
+            <div class="row_2_col">
+                <div class="col_1">
+                    <h6>JR EAST Pass</h6>
+                    <h2>Route 3 : Enjoy Snow in Northern Tohoku</h2>
+                    <p>Northern Tohoku and its multitude of ski resorts receive record levels of powder each winter
+                        making it a skier and snowboarder’s dream. And with the region’s fascinating cultural history
+                        comes a wealth of festivals and customs like nowhere else in the world.
+                    </p>
+                    <ul>
+                        <li><b>Travel days</b></li>
+                        <li>5 selected days within 14 days after activation of JR EAST PASS </li>
+                        <li><b>Destination</b></li>
+                        <li>Fukushima</li>
+                        <li>Akita</li>
+                        <li>Yamagata</li>
+                    </ul>
+                    <img src="./assets/fukushima.png" alt="">
+                </div>
+                <div class="col_2">
+                    <img src="./assets/route2.png" alt="">
+                </div>
+            </div>
+            <div class="recommended_spots">
+                <div class="center_heading">Recommended Spots</div>
+                <div class="spot_row">
+                    <div class="col_1">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">2</div>
+                                <img src="./assets/namahage-of-oga.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Experience the legendary Namahage of Oga</h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                In folklore going back 2000 years, the ogre-like beings that dwell in the mountains of
+                                the Oga Peninsula come down every winter to find lazy or naughty children and tell them
+                                to behave. The legend is now recognised by UNESCO and lives on in the region. At the
+                                heart of the Namahage mythology is the Akagami Shrine and its 999 steps the monsters
+                                were tricked into building, thus invoking their anger.
+                                Book a JR EAST PASS(Tohoku area)
+                            </p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">4</div>
+                                <img src="./assets/mogami-river.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Set sail on the winter waters of the Mogami
+                                River
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Haiku master, Basho, wrote many poems about the grandeur and beauty of the Mogami River.
+                                And a winter cruise down its broad, meandering streets explains why. Set in the
+                                spectacular scenery of Yamagata, the snow-covered mountains and cliffs on either side
+                                give way to this magnificent waterway. Electric-blanket-style kotatsu heaters keep you
+                                warm as you wend downstream, even on the coldest winter’s day.
+                                Book a JR EAST PASS(Tohoku area)
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col_2">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">1</div>
+                                <img src="./assets/ouchi-juku-post-town.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Step back in time at Ouchi-Juku post-town</h4>
+                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s">
+                                Since the Edo Period, travellers have stopped at Ouchi-Juku. And things haven’t changed
+                                much in this traditional post-town, so called as it was always the waypoint for weary
+                                travellers on their way to what is now Tokyo. In winter, this delightful village is even
+                                more picturesque. Its 300-year-old buildings, their traditional thatched roofs cloaked
+                                in thick snow, look almost make believe.
+                                Book a JR EAST PASS(Tohoku area)
+                            </p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">3</div>
+                                <img src="./assets/kiritanpo-nabe-hotpot.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Warm your soul with Kiritanpo Nabe hotpot
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">After spending the day in the snow, there’s
+                                nothing like soul food to give you back your glow. Kiritanpo Nabe - a hotpot of chicken
+                                broth full of burdock root, maitake mushrooms, leeks and meat is traditional winter fare
+                                in the Akita Prefecture. The dish’s iconic kiritanpo ‘dumplings’ - pounded cooked rice
+                                shaped around cedar skewers and roasted over charcoal - make this a meal your heart will
+                                always remember.
+                                Book a JR EAST PASS(Tohoku area)
+                            </p>
+                        </div>
+                        <div class="spot_card">
+                            <div class="img">
+                                <div class="label">5</div>
+                                <img src="./assets/ginzan-onsen.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Soak up the beauty in Ginzan Onsen
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Over 500 years ago, Ginzan Onsen was a prosperous silver mine. These days, its original
+                                ryokan hotels and their wood and white plaster walls, public hot spring spas and little
+                                bridges over the Ginzan River make this town a must-see. During winter days, snow-clad
+                                roofs and narrow streets by the river are easy on the eye, but at night, with the gas
+                                lamps lit, Ginzan Onsen turns into a Japanese fairytale.
+                                Book a JR EAST PASS(Tohoku area)
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tab4" class="tab_content">
+            <div class="row_2_col">
+                <div class="col_1">
+                    <h6>JR EAST Pass</h6>
+                    <h2>Route 4 : Snow monkeys, sacred mountains and winter fruit </h2>
+                    <p>
+                        Nagano’s natural beauty is never more striking than during winter. Snow monkeys escaping the
+                        chill in their hot-spring pools, shrines atop mountains wear white capes and the prefecture’s
+                        sweet dried persimmon brings smiles to cold faces.
+                    </p>
+                    <ul>
+                        <li><b>Travel days</b></li>
+                        <li>5 selected days within 14 days after activation of JR EAST PASS
+                        </li>
+                        <li><b>Destination</b></li>
+                        <li>Niigata</li>
+                        <li>Nagano</li>
+                    </ul>
+                    <img src="./assets/niigata.png" alt="">
+                </div>
+                <div class="col_2">
+                    <img src="./assets/route2.png" alt="">
+                </div>
+            </div>
+            <div class="recommended_spots">
+                <div class="center_heading">Recommended Spots</div>
+                <div class="spot_row">
+                    <div class="col_1">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">2</div>
+                                <img src="./assets/yahiko-shrine.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Absorb the energy and spiritual beauty of
+                                Yahiko Shrine, Niigata
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Power spots - places of significant energy - are an important cultural element in Japan.
+                                For 2,400 years, Yahiko Shrine has been a focal point for power spots. And when winter
+                                snow covers the torii gates, bridges and temples here, there’s an extra level of
+                                spiritual magnitude to this sacred site. Discover resting places of enshrined gods, take
+                                in the exhilarating scenery and see if your wish will come true with the wishing rocks
+                                of Hi-no-Tama-Ishi.
+                                Book a JR EAST PASS(Nagano, Niigata area)
+                            </p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">4</div>
+                                <img src="./assets/noodles-of-nagano.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Try Togakushi soba noodles of Nagano
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Soba noodles are a standard dish found anywhere in Japan these days, but Togakushi soba
+                                - soba noodles from Togakushi, Nagano City - are literally a law to themselves. This
+                                dish is so traditional and part of Nagano’s culture, there are rules about how it’s
+                                served, eaten, and even what condiments and sides it has. It seems all buckwheat noodles
+                                are soba noodles, but not all soba noodles are Togakushi soba!
+                                Book a JR EAST PASS(Nagano, Niigata area)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col_2">
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">1</div>
+                                <img src="./assets/pinnacle-of-sushi.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Taste the pinnacle of sushi
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s">
+                                Sushi from the famed port town of Niigata is unlike anything you’re likely to find on
+                                your average sushi train. With two estuaries of major rivers flowing into the sea here,
+                                the abundance of seafood makes for incredible eating in Niigata. Rosy sea bass, spear
+                                squid and cinnamon flounder have a place in sushi restaurants throughout the town and
+                                the kiwami - ‘the pinnacle’ - is a greatest-hits plate not to be missed.
+                                Book a JR EAST PASS(Nagano, Niigata area)
+                            </p>
+                        </div>
+                        <div class="spot_card lax" data-lax-preset="eager">
+                            <div class="img">
+                                <div class="label">3</div>
+                                <img src="./assets/monkey-park.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Spot snow monkeys at Jigokudani Monkey Park
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                As steam rises in curling threads from the hot-spring pools and streams of Jigokudani
+                                Monkey Park, it creates an almost mystical air and sets the scene for one of nature’s
+                                most remarkable, unique and recognisable spectacles. Snow monkeys - native macaques -
+                                that live in the park love to come to these ‘onsen’ when the winter snows lie thick on
+                                that mountainside to bask and bathe eyes closed in the warm water.
+                                Book a JR EAST PASS(Nagano, Niigata area)
+                            </p>
+                        </div>
+                        <div class="spot_card">
+                            <div class="img">
+                                <div class="label">5</div>
+                                <img src="./assets/fukushima.png" alt="">
+                            </div>
+                            <h4 class="scroll_anim" data-anim="slideInUp">Climb ‘Crow Castle’ - historic Matsumoto,
+                                Nagano
+                            </h4>
+                            <p class="scroll_anim" data-anim="slideInUp">
+                                Known as Crow Castle because of its black tiered walls, this striking edifice looms out
+                                of the snow from its moated palisade and lets you imagine what life would have been like
+                                in Feudal Japan. The country’s oldest remaining castle donjon, Matsumoto is a piece of
+                                living history and inside, its low ceilings and steeps stairs lead you through rooms
+                                full of armaments and weapons of past wars.
+                                Book a JR EAST PASS(Nagano, Niigata area)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="pass">
         <div class="row_2_col">
@@ -196,453 +723,6 @@
         </div>
     </section>
 
-    <section id="tabs">
-        <div class="tabs_row">
-            <div data-target="tab1" class="tab active">
-                <b>Route 1</b>
-                <span>Sakura in Tohoku</span>
-            </div>
-            <div data-target="tab2" class="tab">
-                <b>Route 2</b>
-                <span>Travel with Joyful Trains</span>
-            </div>
-            <div data-target="tab3" class="tab">
-                <b>Route 3</b>
-                <span>Enjoy culture and nature in Tohoku</span>
-            </div>
-            <div data-target="tab4" class="tab">
-                <b>Route 4</b>
-                <span>Snow Monkeys, Sushi & a deep history</span>
-            </div>
-        </div>
-        <div id="tab1" class="tab_content">
-            <div class="row_2_col">
-                <div class="col_1">
-                    <h6>JR EAST Pass</h6>
-                    <h2>Route 1 : Sakura in Tohoku</h2>
-                    <p>When Cherry blossoms fall at Tokyo, Spring has visited Northern Japan - Tohoku at last. This area
-                        has a lot of famous spot of cherry blossom which attracts you with harmony of original sceneries
-                        such as historical buildings and majestic mountains. The best time to enjoy cherry blossom at
-                        Tohoku is from the end of April to the beginning of May when the price of air tickets goes down.
-                        Why not visit Tohoku area in this season?
-                    </p>
-                    <ul>
-                        <li><b>Travel days</b></li>
-                        <li>5 selected days within 14 days after activation of JR EAST PASS </li>
-                        <li><b>Destination</b></li>
-                        <li>Miyagi</li>
-                        <li>Iwate</li>
-                        <li>Aomori</li>
-                        <li>Akita</li>
-                        <li>Fukushima</li>
-                    </ul>
-                    <img src="./assets/joyfulTrain.png" alt="">
-                </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
-                </div>
-            </div>
-            <div class="recommended_spots">
-                <div class="center_heading">Recommended Spots</div>
-                <div class="spot_row">
-                    <div class="col_1">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">2</div>
-                                <img src="./assets/Tohoku Emotion.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Kitakami Tenshochi Park</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Kitakami Tenshochi is on the banks of Kitakami river and is counted in one of Japan’s
-                                Top 100 Cherry Blossom Viewing Sites and the top 3 cherry blossom locations in the
-                                Michinoku – Tohoku region. In addition to row of cherry trees along the river, it’s said
-                                there are over 10,000, 150 different kinds cherry trees in the park, and you can enjoy
-                                different types of cherries from middle of April to the beginning of May.
-                            </p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">4</div>
-                                <img src="./assets/Kairi.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Kakunodate</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Kakunodate is known as a famous cherry blossom spot in Akita prefecture. Over 400
-                                weeping cherry blossoms are in their full glory on both side of the road lined with
-                                Samurai houses, which creates lyrical scenery.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col_2">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">1</div>
-                                <img src="./assets/Toreiyu Tsubasa.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Funaoka Joshi Koen</h4>
-                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s">Funaoka Joshi Koen is known
-                                as a famous cherry blossom spot in Tohoku, which has more than 1.300 cherry blossom
-                                trees and is chosen as one of Japan’s Top 100 Cherry Blossom Viewing Sites. You also
-                                enjoy Thousand Trees of Cherry Blossoms at the Bank of Shiroishi River nearby.
-                            </p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">3</div>
-                                <img src="./assets/Resort Shirakami.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Hirosaki Castle Park</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Hirosaki Park is known as Japan’s three major cherry blossom spots. Highlight is
-                                contrast between cherry trees in full bloom and Hirosaki castle. Also, you can see
-                                Japan‘s oldest Yoshino cherry in full bloom and enjoy cherry blossom blizzard and flower
-                                raft. Please enjoy the cherry blossom at Hirosaki Park, which is also called one of the
-                                most beautiful scerery.
-                                .</p>
-                        </div>
-                        <div class="spot_card">
-                            <div class="img">
-                                <div class="label">5</div>
-                                <img src="./assets/Genbi Shinkansen.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Tsurugajo Castle Park</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Tsurugajo‘s castle tower is covered with red roof tiles and it’s the only castle in
-                                Japan. The harmony between the red color roof and over 1,000 cherry blossoms is
-                                splendid. It is chosen as one of Japan’s Top 100 Cherry Blossom Viewing Sites.
-                                <p><i>All images credit East Japan Railway Company</i></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="tab2" class="tab_content">
-            <div class="row_2_col">
-                <div class="col_1">
-                    <h6>JR East Rail Pass</h6>
-                    <h2>Route 2 : Joyful Train</h2>
-                    <p>Riding the train is no longer just transportation to the destination but how you get there. The
-                        Joyful Train is tourism trains themed “Riding fun” and a new way to travel. This Joyful Train
-                        offers an exciting variety of services.</p>
-                    <ul>
-                        <li><b>Travel days</b></li>
-                        <li>5 selected days within 14 days after activation of JR EAST PASS</li>
-                        <li><b>Destination</b></li>
-                        <li>Fukushima</li>
-                        <li>Yamagata</li>
-                        <li>Iwate</li>
-                        <li>Akita</li>
-                        <li>Aomori</li>
-                        <li>Niigata</li>
-                    </ul>
-                    <img src="./assets/joyfulTrain.png" alt="">
-                </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
-                </div>
-            </div>
-            <div class="recommended_spots">
-                <div class="center_heading">Recommended Spots</div>
-                <div class="spot_row">
-                    <div class="col_1">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">2</div>
-                                <img src="./assets/Tohoku Emotion.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Tohoku Emotion</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">Car interior like a restaurant that makes it
-                                possible to leisurely enjoy meals while
-                                viewing the scenery. Feast your eyes on the various tableware and fixtures, the fruits
-                                of of Took traditional skills and beauty created solely for <b>Tohoku Emotion</b>.</p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">4</div>
-                                <img src="./assets/Kairi.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Kairi</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">The <b>KAIRI</b> debuted just on October 5,
-                                2019, is a new hybrid diesel configured with
-                                four
-                                cars providing service between Niigata and Sakata. You can enjoy the cuisineof Niigata
-                                and SHonaim and the beautiful vistas.</p>
-                        </div>
-                    </div>
-                    <div class="col_2">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">1</div>
-                                <img src="./assets/Toreiyu Tsubasa.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">TOREIYU TSUBASA</h4>
-                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s"><b>TOREIYU TSUBASA</b> is the
-                                world’s first Shinkansen with a foot bath. Enjoy Yamagata’s
-                                food,
-                                alcohol and foot bath from inside the train.</p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">3</div>
-                                <img src="./assets/Resort Shirakami.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Resort Shirakami</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">Get your fill of beautiful scenery, including
-                                waves washing against fantastically shaped
-                                rocks, the Shirakami mountains, etc. Also enjoy a Tsugaru Shamisen performance while on
-                                trains.</p>
-                        </div>
-                        <div class="spot_card">
-                            <div class="img">
-                                <div class="label">5</div>
-                                <img src="./assets/Genbi Shinkansen.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Genbi Shinkansen</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">The world’s fastest art experience! Modern art
-                                created by prominent artists especially
-                                for the Genbi Shinkansen is on exhibit in each car. Enjoy modern art while travelling on
-                                the Shinkanse.</p>
-                            <p><i>All images credit East Japan Railway Company</i></p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="tab3" class="tab_content">
-            <div class="row_2_col">
-                <div class="col_1">
-                    <h6>JR EAST Pass</h6>
-                    <h2>Route 3 : Enjoy Snow in Northern Tohoku</h2>
-                    <p>Northern Tohoku and its multitude of ski resorts receive record levels of powder each winter
-                        making it a skier and snowboarder’s dream. And with the region’s fascinating cultural history
-                        comes a wealth of festivals and customs like nowhere else in the world.
-                    </p>
-                    <ul>
-                        <li><b>Travel days</b></li>
-                        <li>5 selected days within 14 days after activation of JR EAST PASS </li>
-                        <li><b>Destination</b></li>
-                        <li>Fukushima</li>
-                        <li>Akita</li>
-                        <li>Yamagata</li>
-                    </ul>
-                    <img src="./assets/joyfulTrain.png" alt="">
-                </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
-                </div>
-            </div>
-            <div class="recommended_spots">
-                <div class="center_heading">Recommended Spots</div>
-                <div class="spot_row">
-                    <div class="col_1">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">2</div>
-                                <img src="./assets/Tohoku Emotion.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Experience the legendary Namahage of Oga</h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                In folklore going back 2000 years, the ogre-like beings that dwell in the mountains of
-                                the Oga Peninsula come down every winter to find lazy or naughty children and tell them
-                                to behave. The legend is now recognised by UNESCO and lives on in the region. At the
-                                heart of the Namahage mythology is the Akagami Shrine and its 999 steps the monsters
-                                were tricked into building, thus invoking their anger.
-                                Book a JR EAST PASS(Tohoku area)
-                            </p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">4</div>
-                                <img src="./assets/Kairi.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Set sail on the winter waters of the Mogami
-                                River
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Haiku master, Basho, wrote many poems about the grandeur and beauty of the Mogami River.
-                                And a winter cruise down its broad, meandering streets explains why. Set in the
-                                spectacular scenery of Yamagata, the snow-covered mountains and cliffs on either side
-                                give way to this magnificent waterway. Electric-blanket-style kotatsu heaters keep you
-                                warm as you wend downstream, even on the coldest winter’s day.
-                                Book a JR EAST PASS(Tohoku area)
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col_2">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">1</div>
-                                <img src="./assets/Toreiyu Tsubasa.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Step back in time at Ouchi-Juku post-town</h4>
-                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s">
-                                Since the Edo Period, travellers have stopped at Ouchi-Juku. And things haven’t changed
-                                much in this traditional post-town, so called as it was always the waypoint for weary
-                                travellers on their way to what is now Tokyo. In winter, this delightful village is even
-                                more picturesque. Its 300-year-old buildings, their traditional thatched roofs cloaked
-                                in thick snow, look almost make believe.
-                                Book a JR EAST PASS(Tohoku area)
-                            </p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">3</div>
-                                <img src="./assets/Resort Shirakami.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Warm your soul with Kiritanpo Nabe hotpot
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">After spending the day in the snow, there’s
-                                nothing like soul food to give you back your glow. Kiritanpo Nabe - a hotpot of chicken
-                                broth full of burdock root, maitake mushrooms, leeks and meat is traditional winter fare
-                                in the Akita Prefecture. The dish’s iconic kiritanpo ‘dumplings’ - pounded cooked rice
-                                shaped around cedar skewers and roasted over charcoal - make this a meal your heart will
-                                always remember.
-                                Book a JR EAST PASS(Tohoku area)
-                            </p>
-                        </div>
-                        <div class="spot_card">
-                            <div class="img">
-                                <div class="label">5</div>
-                                <img src="./assets/Genbi Shinkansen.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Soak up the beauty in Ginzan Onsen
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Over 500 years ago, Ginzan Onsen was a prosperous silver mine. These days, its original
-                                ryokan hotels and their wood and white plaster walls, public hot spring spas and little
-                                bridges over the Ginzan River make this town a must-see. During winter days, snow-clad
-                                roofs and narrow streets by the river are easy on the eye, but at night, with the gas
-                                lamps lit, Ginzan Onsen turns into a Japanese fairytale.
-                                Book a JR EAST PASS(Tohoku area)
-
-                            </p>
-                            <p><i>All images credit East Japan Railway Company</i></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="tab4" class="tab_content">
-            <div class="row_2_col">
-                <div class="col_1">
-                    <h6>JR EAST Pass</h6>
-                    <h2>Route 4 : Snow monkeys, sacred mountains and winter fruit </h2>
-                    <p>
-                        Nagano’s natural beauty is never more striking than during winter. Snow monkeys escaping the
-                        chill in their hot-spring pools, shrines atop mountains wear white capes and the prefecture’s
-                        sweet dried persimmon brings smiles to cold faces.
-                    </p>
-                    <ul>
-                        <li><b>Travel days</b></li>
-                        <li>5 selected days within 14 days after activation of JR EAST PASS
-                        </li>
-                        <li><b>Destination</b></li>
-                        <li>Niigata</li>
-                        <li>Nagano</li>
-                    </ul>
-                    <img src="./assets/joyfulTrain.png" alt="">
-                </div>
-                <div class="col_2">
-                    <img src="./assets/route2.png" alt="">
-                </div>
-            </div>
-            <div class="recommended_spots">
-                <div class="center_heading">Recommended Spots</div>
-                <div class="spot_row">
-                    <div class="col_1">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">2</div>
-                                <img src="./assets/Tohoku Emotion.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Absorb the energy and spiritual beauty of
-                                Yahiko Shrine, Niigata
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Power spots - places of significant energy - are an important cultural element in Japan.
-                                For 2,400 years, Yahiko Shrine has been a focal point for power spots. And when winter
-                                snow covers the torii gates, bridges and temples here, there’s an extra level of
-                                spiritual magnitude to this sacred site. Discover resting places of enshrined gods, take
-                                in the exhilarating scenery and see if your wish will come true with the wishing rocks
-                                of Hi-no-Tama-Ishi.
-                                Book a JR EAST PASS(Nagano, Niigata area)
-                            </p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">4</div>
-                                <img src="./assets/Kairi.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Try Togakushi soba noodles of Nagano
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Soba noodles are a standard dish found anywhere in Japan these days, but Togakushi soba
-                                - soba noodles from Togakushi, Nagano City - are literally a law to themselves. This
-                                dish is so traditional and part of Nagano’s culture, there are rules about how it’s
-                                served, eaten, and even what condiments and sides it has. It seems all buckwheat noodles
-                                are soba noodles, but not all soba noodles are Togakushi soba!
-                                Book a JR EAST PASS(Nagano, Niigata area)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col_2">
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">1</div>
-                                <img src="./assets/Toreiyu Tsubasa.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Taste the pinnacle of sushi
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp" data-delay="0.2s">
-                                Sushi from the famed port town of Niigata is unlike anything you’re likely to find on
-                                your average sushi train. With two estuaries of major rivers flowing into the sea here,
-                                the abundance of seafood makes for incredible eating in Niigata. Rosy sea bass, spear
-                                squid and cinnamon flounder have a place in sushi restaurants throughout the town and
-                                the kiwami - ‘the pinnacle’ - is a greatest-hits plate not to be missed.
-                                Book a JR EAST PASS(Nagano, Niigata area)
-                            </p>
-                        </div>
-                        <div class="spot_card lax" data-lax-preset="eager">
-                            <div class="img">
-                                <div class="label">3</div>
-                                <img src="./assets/Resort Shirakami.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Spot snow monkeys at Jigokudani Monkey Park
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                As steam rises in curling threads from the hot-spring pools and streams of Jigokudani
-                                Monkey Park, it creates an almost mystical air and sets the scene for one of nature’s
-                                most remarkable, unique and recognisable spectacles. Snow monkeys - native macaques -
-                                that live in the park love to come to these ‘onsen’ when the winter snows lie thick on
-                                that mountainside to bask and bathe eyes closed in the warm water.
-                                Book a JR EAST PASS(Nagano, Niigata area)
-                            </p>
-                        </div>
-                        <div class="spot_card">
-                            <div class="img">
-                                <div class="label">5</div>
-                                <img src="./assets/Genbi Shinkansen.png" alt="">
-                            </div>
-                            <h4 class="scroll_anim" data-anim="slideInUp">Climb ‘Crow Castle’ - historic Matsumoto,
-                                Nagano
-                            </h4>
-                            <p class="scroll_anim" data-anim="slideInUp">
-                                Known as Crow Castle because of its black tiered walls, this striking edifice looms out
-                                of the snow from its moated palisade and lets you imagine what life would have been like
-                                in Feudal Japan. The country’s oldest remaining castle donjon, Matsumoto is a piece of
-                                living history and inside, its low ceilings and steeps stairs lead you through rooms
-                                full of armaments and weapons of past wars.
-                                Book a JR EAST PASS(Nagano, Niigata area)
-                            </p>
-                            <p><i>All images credit East Japan Railway Company</i></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="steps">
         <div class="shadow_container">
@@ -722,7 +802,7 @@
     <section id="buy">
         <div class="shadow_container">
             <h1 class="center">Where to buy <span>JR EAST</span> Pass</h1>
-            <h1 class="s_underline">For <span>Travellers</span><img src="./assets/661711.png" alt=""></h1>
+            <h1 class="s_underline">For <span> Travellers</span><img src="./assets/661711.png" alt=""></h1>
             <p>
                 Buy your JR EAST PASS before coming to Japan and and make your trip easy and convenient. With just one
                 pass you are almost entirely free to visit the main attractions within the specified area.
@@ -731,7 +811,7 @@
                 <a>Buy Offline</a>
                 <a>Buy Online</a>
             </div>
-            <h1 class="s_underline">For <span>Travel Agents</span><img src="./assets/1571407.png" alt=""></h1>
+            <h1 class="s_underline">For <span> Travel Agents</span><img src="./assets/1571407.png" alt=""></h1>
             <p>
                 When you are planning trips for your customers, get them to discover Japan by train using the JR EAST
                 PASS. The JR EAST PASS provides unlimited travel on any trains within the designated JR EAST PASS area,
