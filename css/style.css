@@ -147,11 +147,18 @@ p {
     display: none;
   }
   #dots {
-    bottom: 5px;
+    position: absolute;
+    bottom: 20px;
     left: 0;
     width: 100%;
     z-index: 2;
     height: 10px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #dots .dot {
     height: 10px;
